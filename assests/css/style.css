@@ -1,0 +1,12 @@
+:root {
+    --color-1: ;
+    --color-2: ;
+    --color-3: ;
+    --background: ;
+    --text: ;
+}
+
+.alerts {
+    background-color: blue;
+    color: white;
+}
