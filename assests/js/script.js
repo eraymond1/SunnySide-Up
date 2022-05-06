@@ -22,3 +22,5 @@ var weatherAlerts;
 fetch(apiCurrent, {
     method: "POST", body: JSON.stringify(weatherAlerts)
 }).then(response => response.json()).then(json => console.log(json));
+
+
