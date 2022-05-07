@@ -3,12 +3,13 @@
     --color-2: rgba(2,230,227,1);
     --color-3: #efcab0 ;
     --background: #f5f1ed;
-    --text: ;
+    --text: #282f33;
 }
 
 body {
     background-color: var(--background);
     font-family: Quicksand, sans-serif;
+    color: var(--text);
 }
 header {
     background-image: linear-gradient(180deg, rgba(4,21,117,1) 0%, rgba(2,132,169,1) 57%, rgba(2,230,227,1) 100%);
@@ -73,4 +74,12 @@ header {
 
 footer {
     background-color: var(--color-3);
+}
+
+footer p a {
+    text-decoration:none;
+    color: var(--text);
+}
+footer p a:hover {
+    color:var(--color-1);
 }
