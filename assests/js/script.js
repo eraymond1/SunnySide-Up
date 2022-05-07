@@ -1,29 +1,13 @@
 
-//urls seperated out by type of weather data
+//apiCurrent supplys all the current weather information needed
 var apiCurrent = "https://api.weatherbit.io/v2.0/current?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
 
-var apiAirQual = "https://api.weatherbit.io/v2.0/airquality?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
+//var apiAirQual = "https://api.weatherbit.io/v2.0/airquality?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
 
-var apiAlerts = "https://api.weatherbit.io/v2.0/alerts?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
-
-
-//three fecth commands to handle the three urls. Will be adding NOAA api soon.
-var currentWeather;
-
-// fetch(apiCurrent, {
-//     method: "POST", body: JSON.stringify(currentWeather)
-// }).then(response => response.json()).then(json => console.log(json));
-
-// var airQual;
-// fetch(apiCurrent, {
-//     method: "POST", body: JSON.stringify(airQual)
-// }).then(response => response.json()).then(json => console.log(json));
+//var apiAlerts = "https://api.weatherbit.io/v2.0/alerts?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
 
 
-// fetch(apiCurrent, {
-//     method: "POST", body: JSON.stringify(currentWeather)
-// }).then(response => response.json()).then(json => console.log(json));
-
+//fetchData currently only fetching weatherbit io 
 function fetchData() {
 
     fetch(apiCurrent).then(response => {
@@ -34,7 +18,7 @@ function fetchData() {
         return response.json();
     }).then(data => {
 
-
+        //using map on all variables to collect api data and parse it to display on webpage
         var airTemp = data.data.map(current => {
             return ` ${current.app_temp}`;
         }).join("");
