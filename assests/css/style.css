@@ -1,14 +1,12 @@
 :root {
     --color-1: rgba(4,21,117,1);
     --color-2: rgba(2,230,227,1);
-<<<<<<< HEAD
     --color-3: ;
     --background: ;
     --text: ;
 }
 
 
-=======
     --color-3: #efcab0 ;
     --background: #f5f1ed;
     --text: ;
@@ -18,40 +16,31 @@ body {
     background-color: var(--background);
     font-family: Quicksand, sans-serif;
 }
->>>>>>> f89ff5a47d8b8e2b5a09458f5abd1ebd3b213e6e
 header {
     background-image: linear-gradient(180deg, rgba(4,21,117,1) 0%, rgba(2,132,169,1) 57%, rgba(2,230,227,1) 100%);
 }
 
-<<<<<<< HEAD
 header h1 {
     font-family: Lobster;
-=======
 .title {
     font-family: Lobster, cursive;
     color: var(--background);
 }
 .subtitle {
     color:black;
->>>>>>> f89ff5a47d8b8e2b5a09458f5abd1ebd3b213e6e
 }
 
 .search-bar h3 {
     color: var(--color-1);
 }
-<<<<<<< HEAD
-=======
 #location:active {
     border: 1px solid rgba(2,132,169,1);
 }
 
->>>>>>> f89ff5a47d8b8e2b5a09458f5abd1ebd3b213e6e
 .button {
     background-color:var(--color-2);
     color: var(--color-1);
     border: 1px solid rgba(2,132,169,1);
-<<<<<<< HEAD
-=======
     box-shadow: 1px 1px 3px var(--color-3);
 }
 .button:hover {
@@ -64,7 +53,6 @@ header h1 {
     box-shadow: 1px 2px 3px var(--color-3);
     border: 1px solid rgba(2,132,169,1);
     color:var(--color-1);
->>>>>>> f89ff5a47d8b8e2b5a09458f5abd1ebd3b213e6e
 }
 
 .alerts {
@@ -73,10 +61,10 @@ header h1 {
     color:white;
 }
 
-<<<<<<< HEAD
 .card-header-title {
     font-family: Lobster;
-=======
+}
+
 .card {
     height:100%;
     min-width: 250px;
@@ -97,5 +85,4 @@ header h1 {
 
 footer {
     background-color: var(--color-3);
->>>>>>> f89ff5a47d8b8e2b5a09458f5abd1ebd3b213e6e
 }

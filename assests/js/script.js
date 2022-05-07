@@ -39,6 +39,8 @@ function fetchData() {
 
 
         document.querySelector("#air-temp").insertAdjacentHTML("afterbegin","Air Temperature: " + airTemp);
+
+        
         var weatherCond = data.data.map(current => {
             return `${current.weather.description}`;
         }).join("");
