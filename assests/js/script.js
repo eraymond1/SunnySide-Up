@@ -15,6 +15,7 @@ var currentWeather;
 
 function fetchData() {
 
+<<<<<<< HEAD
     fetch(apiCurrent).then(response => {
         // console.log(response);
         if(!response.ok){
@@ -61,3 +62,11 @@ fetchData();
 // fetch(apiCurrent, {
 //     method: "POST", body: JSON.stringify(weatherAlerts)
 // }).then(response => response.json()).then(json => console.log(json));
+=======
+var weatherAlerts;
+fetch(apiCurrent, {
+    method: "POST", body: JSON.stringify(weatherAlerts)
+}).then(response => response.json()).then(json => console.log(json));
+
+
+>>>>>>> f53da83f8072c961b24a9f128bafb0b68beddf12
