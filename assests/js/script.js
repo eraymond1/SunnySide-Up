@@ -58,20 +58,22 @@
 
 
 
-//getZipCode();
-
 document.querySelector('#search-form').addEventListener
-('submit', getZipCode);
+    ('submit', getZipCode);
+
 
 function getZipCode(event){
     //get zip from input
     var zip = document.querySelector('.input').value;
     console.log(zip);
+
+    
+
     //make request
     fetch("https://api.weatherbit.io/v2.0/current?postal_code=" + zip + "&key=23f4eb9104a3417ebae0fd654b5b8faa")
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+
 
         var airTemp = data.data.map(current => {
             return ` ${current.app_temp}`;
@@ -99,15 +101,36 @@ function getZipCode(event){
         }).join("");
         document.querySelector("#pollution").insertAdjacentHTML("afterbegin", "Air Quality: " + airQuality);
 
+        var cityName = data.data.map(current => {
+            return `${current.city_name}`;
+        }).join("");
+        document.querySelector(".city-name").insertAdjacentText("afterbegin","Current weather for "  + cityName);
+
+       console.log(cityName);
+        
+
     });
+
+    var submitBtn = document.querySelector("#search-form");
+
+    function reload() {
+
+    reload = location.reload();
+   
+    };
+
+    submitBtn.addEventListener("click", reload, false);  
 
     
     event.preventDefault();
     
-   return zip;
+  
      
 }
 
+
+
+//clearForm();
 
 
 
