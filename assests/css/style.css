@@ -30,7 +30,6 @@ header {
 .search-bar h3 {
     color: var(--color-1);
 }
-
 #location:active {
     border: 1px solid rgba(2,132,169,1);
 }
