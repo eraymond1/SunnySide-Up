@@ -11,9 +11,17 @@ document.querySelector('#search-form').addEventListener
 
 
 function getZipCode(event){
+
+    
     //get zip from input
     var zip = document.querySelector('.input').value;
     console.log(zip);
+
+    if(isNaN(zip)){
+        alert("must input numbers only!");
+    } else if(!((/^[0-9]{5}$/.test(zip)))){
+        alert("Please enter a 5 digit zip code!");
+    }
 
     
 
