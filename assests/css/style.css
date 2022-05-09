@@ -11,6 +11,8 @@ body {
     font-family: Quicksand, sans-serif;
     color: var(--text);
 }
+
+/* HEADER STYLE */
 header {
     background-image: linear-gradient(180deg, rgba(4,21,117,1) 0%, rgba(2,132,169,1) 57%, rgba(2,230,227,1) 100%);
 }
@@ -22,10 +24,13 @@ header {
 .subtitle {
     color:black;
 }
+/* END HEADER STYLE */
 
+/* SEARCH BAR STYLE */
 .search-bar h3 {
     color: var(--color-1);
 }
+
 #location:active {
     border: 1px solid rgba(2,132,169,1);
 }
@@ -47,20 +52,23 @@ header {
     border: 1px solid rgba(2,132,169,1);
     color:var(--color-1);
 }
+/* END SEARCH STYLE */
 
+/* ADVICE STYLE */
 .alerts {
     border-radius: 5px;
     background-color:var(--color-1) ;
-    color:white;
+    color:var(--background);
 }
+/* END ADVICE STYLE */
 
+/* INFO CARDS STYLE */
 .card {
     height:100%;
     min-width: 250px;
     background-color:  var(--color-3);
 }
 .card-header {
-    
     background-image: linear-gradient(180deg, rgba(2,132,169,1) 0%, rgba(2,230,227,1) 100%)
 }
 .card-header-title {
@@ -68,10 +76,11 @@ header {
     color:var(--color-1);
 }
 .card-content {
-    
     width:100%;
 }
+/* END CARDS STYLE */
 
+/* FOOTER STYLE */
 footer {
     background-color: var(--color-3);
 }
@@ -83,3 +92,4 @@ footer p a {
 footer p a:hover {
     color:var(--color-1);
 }
+/* END FOOTER STYLE */
