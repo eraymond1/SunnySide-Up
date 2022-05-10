@@ -92,7 +92,7 @@ function getZipCode(event){
             document.querySelector(".alert-text").insertAdjacentHTML("afterbegin", "Current Alerts: " + weatherAlerts);
             
         }else {
-            weatherAlerts = "Great Day for Sailing!";
+            weatherAlerts = "No weather worries today!";
             document.querySelector(".alert-text").insertAdjacentHTML("afterbegin", weatherAlerts);
             
         }
