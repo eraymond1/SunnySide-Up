@@ -34,10 +34,9 @@ function getZipCode(event){
         var airTemp = data.data.map(current => {
             return ` ${current.app_temp}`;
         }).join("");
-        document.querySelector("#air-temp").insertAdjacentHTML("afterbegin","Air Temperature: " + ((airTemp * 1.8) + 32));
+        document.querySelector("#air-temp").insertAdjacentHTML("afterbegin","Air Temperature: " + (Math.floor((airTemp * 1.8) + 32)) + " F");
 
 
-        document.querySelector("#air-temp").insertAdjacentHTML("afterbegin","Air Temperature: " + ((airTemp * 1.8) + 32));
         var weatherCond = data.data.map(current => {
             return `${current.weather.description}`;            
         }).join("");
@@ -47,7 +46,10 @@ function getZipCode(event){
         var windSpeed = data.data.map(current => {
             return `${current.wind_spd}`;
         }).join("");
-        document.querySelector("#wind-speed").insertAdjacentHTML("afterbegin", "Wind Speed: " + windSpeed);
+        var windDirection = data.data.map(current => {
+            return `${current.wind_cdir}`;
+        }).join("");
+        document.querySelector("#wind-speed").insertAdjacentHTML("afterbegin", "Wind Speed: " + windSpeed + " mph " + windDirection);
 
         var uvIndex = data.data.map(current => {
             return `${current.uv}`;
