@@ -22,14 +22,24 @@
         <div class="search-bar column is-one-third is-offset-one-third has-text-centered my-3">
             <h3 class="is-centered">Search For a Beach By Zip Code</h3>
             <form id="search-form" >
-                <input name="location" id="location" type="text" autofocus="true" class="input column  m-1" placeholder="Zip Code" />
-                <button type="submit" class="button is-centered is-medium">Get Beach Info</button>
+                <input name="location" id="location" type="text" autofocus="true" class="input column  m-1" placeholder="Zip Code"  />
+                <button id="submit" type="submit" class="button is-centered is-medium">Get Beach Info</button>
             </form>
         </div>
 
         <!-- could use javascript to turn the alerts box into a content carousel (super easy, I actually already have like half of the code for this)-->
         <div class="alerts column is-10 is-offset-1 is-centered has-text-centered">
-            <p class="alert-text is-size-2 m-3">Great day for sailing!</p>
+            
+            <p id="alerts" class="alert-text is-size-2 m-3"></p>
+
+        </div>
+        <div class="city">
+
+            <h2 class="city-name"></h2>
+            <!-- <ul class="card-header-title" >
+                <li id="city-name"></li>
+            </ul> -->
+
         </div>
 
         <div class="columns is-variable is-8 m-5 is-desktop">
@@ -51,10 +61,10 @@
                              
                         </li>
                         <li id="UV-index">
-                            UV Index: 
+                             
                         </li>
                         <li id="pollution">
-                            Pollution levels: 
+                             
                         </li>
                     </ul>
                 </div>
