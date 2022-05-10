@@ -67,10 +67,6 @@ header {
 /* END ADVICE STYLE */
 
 /* INFO CARDS STYLE */
-.city {
-    text-align: center;
-    
-}
 
 .city-name {
     font-weight: bolder;
@@ -180,7 +176,7 @@ footer li {
 }
 
 .nav-ul a {
-  color: #999;
+  color: var(--color-1);
 }
 
 
