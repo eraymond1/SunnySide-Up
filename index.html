@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project 1</title>
+    <title>Sunny Side Up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -19,142 +19,179 @@
 
   <body>
     <header class="has-text-centered mb-3 py-5">
-      <h1 class="title is-1">Project Title</h1>
-      <p class="subtitle is-4 pt-2">Catchy subheading!</p>
+      <h1 class="title is-1">Sunny Side Up</h1>
+      <p class="subtitle is-4 pt-2">To Beach Or Not To Beach... That Is The Question!</p>
     </header>
 
-    <main>
-      <div
-        class="search-bar column is-one-third is-offset-one-third has-text-centered my-3"
-      >
-        <h3 class="is-centered">Search For a Beach By Zip Code</h3>
-        <form id="search-form">
-          <input
-            name="location"
-            id="location"
-            type="text"
-            autofocus="true"
-            class="input column m-1"
-            placeholder="Zip Code"
-          />
-          <button type="submit" class="button is-centered is-medium">
-            Get Beach Info
-          </button>
-        </form>
-      </div>
-
-      <!-- could use javascript to turn the alerts box into a content carousel (super easy, I actually already have like half of the code for this)-->
-      <div
-        class="alerts column is-10 is-offset-1 is-centered has-text-centered"
-      >
-        <p class="alert-text is-size-2 m-3">Great day for sailing!</p>
-      </div>
-
-      <div class="columns is-variable is-8 m-5 is-desktop">
-        <div class="weather column">
-          <div class="card mb-4">
-            <div class="card-header is-size-4">
-              <h4 class="card-header-title">Weather Information</h4>
-            </div>
-            <ul id="weather-info" class="card-content">
-              <li id="air-temp"></li>
-              <li id="weather-condition"></li>
-              <li id="wind-speed"></li>
-              <li id="UV-index">UV Index:</li>
-              <li id="pollution">Pollution levels:</li>
-            </ul>
-          </div>
+      <main>
+        <div class="search-bar column is-one-third is-offset-one-third has-text-centered my-3">
+            <h3 class="is-centered">Search For a Beach By Zip Code</h3>
+            <form id="search-form" >
+                <input name="location" id="location" type="text" autofocus="true" class="input column  m-1" placeholder="Zip Code"  />
+                <button id="submit" type="submit" class="button is-centered is-medium">Get Beach Info</button>
+            </form>
         </div>
-        <div class="water column">
-          <div class="card mb-4">
-            <div class="card-header is-size-4">
-              <h4 class="card-header-title">Water Information</h4>
-            </div>
-            <ul id="water-info" class="card-content">
-              <li id="water-temp">Water temperature:</li>
-              <li id="currents">Currents:</li>
-              <li id="wave-height">Wave height:</li>
-              <li id="high-tide">Next high tide:</li>
-              <li id="low-tide">Next low tide:</li>
-            </ul>
-          </div>
+
+        <!-- could use javascript to turn the alerts box into a content carousel (super easy, I actually already have like half of the code for this)-->
+        <div class="alerts column is-10 is-offset-1 is-centered has-text-centered">
+            
+            <p id="alerts" class="alert-text is-size-2 m-3"></p>
+
         </div>
-        <div class="map column">
-          <div class="card mb-4">
-            <div class="card-header is-size-4">
-              <h4 class="card-header-title">Map of Nearby Area</h4>
+        <div class="city is-centered">
+
+            <h2 class="city-name pt-4 has-text-centered"></h2>
+
+        </div>
+
+        <div class="columns is-variable is-8 m-5 is-desktop">
+            <div class="weather column ">
+                <div class="card mb-4 ">
+                    <div class="card-header is-size-4"> 
+                        <h4 class="card-header-title">
+                            Weather Information
+                        </h4>
+                    </div>
+                    <ul id="weather-info" class="card-content">
+                        <li id="air-temp">
+                             
+                        </li>
+                        <li id="weather-condition">
+                             
+                        </li>
+                        <li id="wind-speed">
+                             
+                        </li>
+                        <li id="UV-index">
+                             
+                        </li>
+                        <li id="pollution">
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="water column">
+                <div class="card mb-4">
+                    <div class="card-header is-size-4">
+                        <h4 class="card-header-title">
+                            Water Information
+                        </h4>
+                    </div>
+                    <ul id="water-info" class="card-content">
+                        <li id="water-temp">
+                            Water temperature: 
+                        </li>
+                        <li id="currents">
+                            Currents: 
+                        </li>
+                        <li id="wave-height">
+                            Wave height: 
+                        </li>
+                        <li id="high-tide">
+                            Next high tide: 
+                        </li>
+                        <li id="low-tide">
+                            Next low tide: 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map column">
+                <div class="card mb-4 ">
+                    <div class="card-header is-size-4">
+                        <h4 class="card-header-title">
+                            Map of Nearby Area
+                        </h4>
+                    </div>
+                    <!-- will need to figure out how to get new url for map when a new zip code is entered-->
+                    <iframe
+                    width="460"
+                    height="300"
+                    style="border: 0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/search?q=beaches%20near%20new%20haven%20ct%20usa&key=AIzaSyA99w3ckgaWMRHBkaJ5v90qVjYTx4TECKM"
+                  ></iframe>
+                </div>
             </div>
             <!-- will need to figure out how to get new url for map when a new zip code is entered-->
-            <iframe
-              width="460"
-              height="300"
-              style="border: 0"
-              loading="lazy"
-              allowfullscreen
-              src="https://www.google.com/maps/embed/v1/search?q=beaches%20near%20new%20haven%20ct%20usa&key=AIzaSyA99w3ckgaWMRHBkaJ5v90qVjYTx4TECKM"
-            ></iframe>
+           
           </div>
         </div>
-      </div>
     </main>
     <footer class="footer">
-      <div>
-        <h1><strong>Brought to you by Team Sunny Side Up!</strong></h1>
-        <br />
-        <h2 class="nav-title">Contact</h2>
-        teamsunnysideup@gmail.com
-        <br />
+      <div class="is-centered has-text-centered columns">
+        <div class="column has-text-centered">
+            <p class="is-size-5">Brought to you by</p> 
+            <p class="is-size-3">Team Sunny Side Up!</p>
+        </div>
+        <div class="column">
+            <span class="material-symbols-outlined is-size-1" id="display-footer-btn" title="Click to View Full Footer">
+                sunny
+            </span>
+        </div>
+        <div class="column has-text-centered">
+            <h2 class="nav-title">Contact</h2>
+            teamsunnysideup@gmail.com
+            <br />
 
-        <a class="email-btn" href="teamsunnysideup@gmail.com">Email Us</a>
+            <a class="email-btn button is-centered" href="mailto:teamsunnysideup@gmail.com">Email Us</a>
+        </div>
       </div>
 
-      <ul class="footer-nav">
-        <li class="nav-item">
-          <h2 class="nav-title">Sorces</h2>
+      <div class="footer-nav is-centered hide" id="footer-nav">
+        <div class="nav-item">
+          <h2 class="nav-title">Sources</h2>
 
           <ul class="nav-ul">
             <li>
-              <a href="https://www.weatherbit.io/features"> Weatherbit.io</a>
+              <a href="https://www.weatherbit.io/features"> 
+                  Weatherbit.io</a>
             </li>
 
             <li>
               <a href="https://api.tidesandcurrents.noaa.gov/api/prod/">
-                NOAA</a
-              >
+                NOAA</a>
             </li>
             <li>
               <a
-                href="https://console.cloud.google.com/google/maps-apis/new?project=sunnyside-up"
-              >
+                href="https://console.cloud.google.com/google/maps-apis/new?project=sunnyside-up">
                 Google
               </a>
             </li>
+            <li>
+                <a
+                  href="https://stormglass.io/marine-weather/">
+                  Stormglass.io
+                </a>
+              </li>
           </ul>
-        </li>
+        </div>
 
-        <li class="nav-item">
+        <div class="nav-item">
           <h2 class="nav-title">Credits</h2>
 
           <ul class="nav-ul nav-ul-credits">
             <li>
-              <a href="#">Sarah King</a>
+              <a href="https://github.com/negativeH0ll0w">Sarah King</a>
             </li>
 
             <li>
-              <a href="#">Eric Raymond</a>
+              <a href="https://github.com/eraymond1">Eric Raymond</a>
             </li>
 
             <li>
-              <a href="#">Lawrence kocaj </a>
+              <a href="https://github.com/LKocaj">Lawrence Kocaj </a>
             </li>
 
             <li>
-              <a href="#">Philemon AbdEllah Kirlles</a>
+              <a href="https://github.com/PhilemonKirlles">Philemon AbdEllah Kirlles</a>
             </li>
           </ul>
-        </li>
+        </div>
 
-        <li class="nav-item">
+        <div class="nav-item">
           <h2 class="nav-title">Policies</h2>
 
           <ul class="nav-ul">
@@ -167,17 +204,26 @@
             </li>
 
             <li>
-              <a href="#">Reposetory</a>
+              <a href="#">Repository</a>
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
 
-      <div>
-        <p>&copy; 2022. All rights reserved.</p>
+        <div class="nav-item">
+            <h2 class="nav-title">Search History</h2>
+  
+            <ul class="nav-ul" id="history-ul">
 
-        <p>
-          <span>Made remotely with <span>♥</span> by Team SunnySid Up. </span>
+            </ul>
+
+        </div>
+
+    </div>
+
+      <div class="is-centered has-text-centered pt-5">
+        <p>&copy; 2022. All rights reserved. 
+
+          <span>Made remotely with <span>♥</span> by Team SunnySide Up. </span>
         </p>
       </div>
     </footer>
