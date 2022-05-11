@@ -8,20 +8,38 @@
 
 document.querySelector('#search-form').addEventListener
     ('submit', getZipCode);
+var searchForm = document.getElementById('search-form');
 
+document.querySelector('#display-footer-btn').addEventListener('click', displayFooter);
+var footerDisplay = 0;
+function displayFooter() {
+    var footerNav = document.getElementById('footer-nav');
+    if (footerDisplay == 0) {
+        footerNav.classList.remove("hide");
+        footerDisplay = 1;
+    } else {
+        footerNav.classList.add("hide");
+        footerDisplay = 0;
+    }
+
+    }
+    
 
 function getZipCode(event){
 
     
     //get zip from input
     var zip = document.querySelector('.input').value;
+    document.querySelector('.input').value = "";
     console.log(zip);
 
-    if(isNaN(zip)){
-        alert("must input numbers only!");
-    } else if(!((/^[0-9]{5}$/.test(zip)))){
-        alert("Please enter a 5 digit zip code!");
-    }
+    if (isNaN(zip) || !((/^[0-9]{5}$/.test(zip)))){
+        var errorMsg = document.createElement('div');
+        errorMsg.classList.add("error");
+        errorMsg.innerText = "Please enter a 5 digit zip code!";
+        searchForm.appendChild(errorMsg);
+        zip = "";
+    } 
 
     
 

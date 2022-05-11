@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -116,8 +116,15 @@
     </main>
     <footer class="footer">
       <div class="is-centered has-text-centered columns">
-        <h2 class="column"><strong>Brought to you by Team Sunny Side Up!</strong></h2>
-        <br />
+        <div class="column has-text-centered">
+            <p class="is-size-5">Brought to you by</p> 
+            <p class="is-size-3">Team Sunny Side Up!</p>
+        </div>
+        <div class="column">
+            <span class="material-symbols-outlined is-size-1" id="display-footer-btn" title="Click to View Full Footer">
+                sunny
+            </span>
+        </div>
         <div class="column has-text-centered">
             <h2 class="nav-title">Contact</h2>
             teamsunnysideup@gmail.com
@@ -127,7 +134,7 @@
         </div>
       </div>
 
-      <div class="footer-nav is-centered">
+      <div class="footer-nav is-centered hide" id="footer-nav">
         <div class="nav-item">
           <h2 class="nav-title">Sources</h2>
 
@@ -202,7 +209,7 @@
             <ul class="nav-ul" id="history-ul">
 
             </ul>
-            
+
         </div>
 
     </div>
