@@ -2,21 +2,27 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 1</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assests/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sunny Side Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assests/css/style.css" />
   </head>
 
   <body>
-      <header class="has-text-centered mb-3 py-5">
-        <h1 class="title is-1">Project Title</h1>
-        <p class="subtitle is-4 pt-2">Catchy subheading!</p>
-      </header>
+    <header class="has-text-centered mb-3 py-5">
+      <h1 class="title is-1">Sunny Side Up</h1>
+      <p class="subtitle is-4 pt-2">To Beach Or Not To Beach... That Is The Question!</p>
+    </header>
 
       <main>
         <div class="search-bar column is-one-third is-offset-one-third has-text-centered my-3">
@@ -33,12 +39,9 @@
             <p id="alerts" class="alert-text is-size-2 m-3"></p>
 
         </div>
-        <div class="city">
+        <div class="city is-centered">
 
-            <h2 class="city-name"></h2>
-            <!-- <ul class="card-header-title" >
-                <li id="city-name"></li>
-            </ul> -->
+            <h2 class="city-name pt-4 has-text-centered"></h2>
 
         </div>
 
@@ -110,12 +113,108 @@
                 </div>
             </div>
         </div>
-      </main>
+    </main>
+    <footer class="footer">
+      <div class="is-centered has-text-centered columns">
+        <h2 class="column"><strong>Brought to you by Team Sunny Side Up!</strong></h2>
+        <br />
+        <div class="column has-text-centered">
+            <h2 class="nav-title">Contact</h2>
+            teamsunnysideup@gmail.com
+            <br />
 
-      <footer>
+            <a class="email-btn button is-centered" href="mailto:teamsunnysideup@gmail.com">Email Us</a>
+        </div>
+      </div>
 
-      </footer>
+      <div class="footer-nav is-centered">
+        <div class="nav-item">
+          <h2 class="nav-title">Sources</h2>
 
-	<script src="./assests/js/script.js"></script>
+          <ul class="nav-ul">
+            <li>
+              <a href="https://www.weatherbit.io/features"> 
+                  Weatherbit.io</a>
+            </li>
+
+            <li>
+              <a href="https://api.tidesandcurrents.noaa.gov/api/prod/">
+                NOAA</a>
+            </li>
+            <li>
+              <a
+                href="https://console.cloud.google.com/google/maps-apis/new?project=sunnyside-up">
+                Google
+              </a>
+            </li>
+            <li>
+                <a
+                  href="https://stormglass.io/marine-weather/">
+                  Stormglass.io
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="nav-item">
+          <h2 class="nav-title">Credits</h2>
+
+          <ul class="nav-ul nav-ul-credits">
+            <li>
+              <a href="https://github.com/negativeH0ll0w">Sarah King</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/eraymond1">Eric Raymond</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/LKocaj">Lawrence Kocaj </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/PhilemonKirlles">Philemon AbdEllah Kirlles</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-item">
+          <h2 class="nav-title">Policies</h2>
+
+          <ul class="nav-ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+
+            <li>
+              <a href="#">Repository</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-item">
+            <h2 class="nav-title">Search History</h2>
+  
+            <ul class="nav-ul" id="history-ul">
+
+            </ul>
+            
+        </div>
+
+    </div>
+
+      <div class="is-centered has-text-centered pt-5">
+        <p>&copy; 2022. All rights reserved. 
+
+          <span>Made remotely with <span>♥</span> by Team SunnySide Up. </span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assests/js/script.js"></script>
   </body>
 </html>

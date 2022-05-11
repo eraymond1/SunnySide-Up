@@ -67,10 +67,6 @@ header {
 /* END ADVICE STYLE */
 
 /* INFO CARDS STYLE */
-.city {
-    text-align: center;
-    
-}
 
 .city-name {
     font-weight: bolder;
@@ -132,7 +128,7 @@ footer li {
 }
 
 .footer-logo {
-  font-family: "Quicksand", cursive;
+  font-family: "Quicksand", sans-serif;
   font-weight: 500;
   text-transform: lowercase;
   font-size: 1.5rem;
@@ -151,7 +147,6 @@ footer li {
 }
 
 .email-btn {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 36px;
@@ -160,7 +155,6 @@ footer li {
   border: 1px solid rgba(2, 132, 169, 1);
   box-shadow: 1px 1px 3px var(--color-3);
   line-height: 0;
-  margin: 0.6em 0;
   font-size: 1rem;
   color: var(--color-1);
   padding: 0 1.3em;
@@ -172,6 +166,7 @@ footer li {
   display: flex;
   flex-flow: row wrap;
   border-bottom:line var(--color-1);
+  list-style: none;
 }
 
 .footer-nav > * {
@@ -180,7 +175,8 @@ footer li {
 }
 
 .nav-ul a {
-  color: #999;
+  color: var(--color-1);
+  list-style:none;
 }
 
 
