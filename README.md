@@ -35,7 +35,7 @@ Providing tips on how to prepare for the weather condetions in your shore side a
 * Framework
 * JavaScript
 * markdown
-* 
+* Bulma
 ---
 
 ## How To Use
@@ -65,25 +65,25 @@ Copyright (c) [2022] [???sunny side up team???]
 ---
 
 ## Author Info
--name- [????]
+-name- Eric Raymond
 -email- [?????]
 -social media- [???]
--protfolio- [?????]
+-portfolio- https://github.com/eraymond1
 
--name- [????]
+-name- Lawrence Kocaj
 -email- [?????]
 -social media- [???]
--protfolio- [?????]
+-portfolio- https://github.com/LKocaj
 
--name- [????]
+-name- Philemon AbdEllah Kirlles
 -email- [?????]
 -social media- [???]
--protfolio- [?????]
+-portfolio- https://github.com/PhilemonKirlles
 
--name- [????]
--email- [?????]
--social media- [???]
--protfolio- [?????]
+-name- Sarah King
+-email- sarahking573@gmail.com
+-social media- https://www.linkedin.com/in/sarah-king-7952aa161/
+-portfolio- https://github.com/negativeH0ll0w
 ## Website
 https://philemonkirlles.github.io/???/
 
