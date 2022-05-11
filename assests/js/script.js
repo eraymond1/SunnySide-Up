@@ -76,6 +76,11 @@ var weatherAlerts;
 fetch(apiCurrent, {
     method: "POST", body: JSON.stringify(weatherAlerts)
 }).then(response => response.json()).then(json => console.log(json));
-
-
-
+// begin google maps place api
+// 
+// 
+// 
+// 
+fetch(apiPlaces, {
+    method: "POST", body: JSON.stringify(currentWeather)
+}).then(response => response.json()).then(json => console.log(json));
