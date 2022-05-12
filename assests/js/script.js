@@ -156,7 +156,7 @@ function saveStoreArray(zip, cityName) {
 }
 
 var historyEl = document.getElementById('history-ul');
-  var loadHistory = function() {
+  function loadHistory() {
     var savedSearch = localStorage.getItem("history");
 
     if (!savedSearch) { // if no saved searches then do nothing
@@ -166,16 +166,18 @@ var historyEl = document.getElementById('history-ul');
     console.log("Saved locations found!");
   
     // parse into array of objects
-    savedSearch = JSON.parse(savedSearch);
+    searchHistory = JSON.parse(savedSearch);
     console.log(savedSearch);
     // loop through array 
     for (var i = 0; i < searchHistory.length; i++) {
       // create list elements in footer
       var listItem = document.createElement("li");
-      listItem.innerText = savedSearch[i];
+      var cityHistory = searchHistory[i].city;
+      var zipHistory = searchHistory[i].zipCode;
+      listItem.innerText = cityHistory + " (" + zipHistory + ")";
       historyEl.appendChild(listItem);
         // add to searchHistory array
-        searchHistory.push(savedSearch[i]);
+        //searchHistory.push(savedSearch[i]);
     }
   };
 
