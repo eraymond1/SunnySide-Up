@@ -130,6 +130,24 @@ function getZipCode(event){
 
     submitBtn.addEventListener("click", reload, false);  
 
+<<<<<<< HEAD
+// var weatherAlerts;
+// fetch(apiCurrent, {
+//     method: "POST", body: JSON.stringify(weatherAlerts)
+// }).then(response => response.json()).then(json => console.log(json));
+var weatherAlerts;
+fetch(apiCurrent, {
+    method: "POST", body: JSON.stringify(weatherAlerts)
+}).then(response => response.json()).then(json => console.log(json));
+// begin google maps place api
+// 
+// 
+// 
+// 
+fetch(apiPlaces, {
+    method: "POST", body: JSON.stringify(currentWeather)
+}).then(response => response.json()).then(json => console.log(json));
+=======
     
     event.preventDefault();
     
@@ -139,3 +157,4 @@ function getZipCode(event){
 
 
 
+>>>>>>> a80b0de44f46fcd8a0564c6b7b425c0237c3eeb4
