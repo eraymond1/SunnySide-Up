@@ -27,6 +27,9 @@ function displayFooter() {
 
 function getZipCode(event){
 
+    var lat;
+    var lon;
+
     
     //get zip from input
     var zip = document.querySelector('.input').value;
@@ -85,9 +88,38 @@ function getZipCode(event){
         document.querySelector(".city-name").insertAdjacentText("afterbegin","Current weather for "  + cityName);
 
        //console.log(cityName);
+
+       lon = data.data.map(current => {
+           return `${current.lon}`;
+       }).join("");
+
+       
+
+       lat = data.data.map((current => {
+           return`${current.lat}`
+       })).join("");
+
+        console.log("lon = " + lon);
+        console.log("lat = " + lat);
+
+       
+       fetch("http://api.worldweatheronline.com/premium/v1/marine.ashx?key=3722e23125dd4dfd919204849221305&format=JSON&q=" + lat + "," + lon)
+        .then(response => response.json())
+        .then(data => {
+
+            console.log(data);
+
+            var waterTemp = data.data.map(hourly => {
+                return `${hourly.waterTemp_F}`
+            }).join("");
+            console.log(waterTemp);
+        });
+
         
 
     });
+
+    
 
     fetch("https://api.weatherbit.io/v2.0/alerts?postal_code=" + zip + "&key=23f4eb9104a3417ebae0fd654b5b8faa")
     .then(response => {
@@ -120,6 +152,8 @@ function getZipCode(event){
         console.log(error);
     });
 
+    
+
     var submitBtn = document.querySelector("#search-form");
 
     function reload() {
@@ -136,6 +170,17 @@ function getZipCode(event){
   
      
 };
+
+// function getTides(){
+//     fetch("http://api.worldweatheronline.com/premium/v1/marine.ashx?key=3722e23125dd4dfd919204849221305&format=JSON&q=41.3572,-72.0579")
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//     });
+
+// }
+
+// getTides();
 
 
 
