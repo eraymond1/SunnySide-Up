@@ -135,7 +135,7 @@ function getZipCode(event){
     
   
      
-}
+};
 
 
 
