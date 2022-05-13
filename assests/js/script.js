@@ -171,16 +171,5 @@ function getZipCode(event){
      
 };
 
-// function getTides(){
-//     fetch("http://api.worldweatheronline.com/premium/v1/marine.ashx?key=3722e23125dd4dfd919204849221305&format=JSON&q=41.3572,-72.0579")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data);
-//     });
-
-// }
-
-// getTides();
-
 
 
