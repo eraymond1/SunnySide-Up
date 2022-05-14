@@ -103,11 +103,8 @@ function getZipCode(event){
            return`${current.lat}`
        })).join("");
 
-        console.log("lon = " + lon);
-        console.log("lat = " + lat);
-
        
-       fetch("http://api.worldweatheronline.com/premium/v1/marine.ashx?key=3722e23125dd4dfd919204849221305&format=JSON&q=" + lat + "," + lon)
+       fetch("http://api.worldweatheronline.com/premium/v1/marine.ashx?key=3722e23125dd4dfd919204849221305&format=JSON&&tide-yes&q=" + lat + "," + lon)
         .then(response => response.json())
         .then(data => {
 
@@ -118,6 +115,24 @@ function getZipCode(event){
             }).join("");
             document.querySelector("#water-temp").insertAdjacentText("afterbegin","Water Temperature: "  + waterTemp[1] + waterTemp[2] + "F");
             
+            var waveHeight = data.data.weather.map(weather => {
+                return `${JSON.stringify(weather.hourly[0].swellHeight_ft)}`
+            }).join("");
+            document.querySelector("#wave-height").insertAdjacentText("afterbegin","Wave Height: "  + waveHeight[1] + waveHeight[2] + waveHeight[3] + " ft");
+            
+
+            var waveDegree = data.data.weather.map(weather => {
+                return `${JSON.stringify(weather.hourly[0].swellDir)}`
+            }).join("");
+            document.querySelector("#wave-degree").insertAdjacentText("afterbegin","Wave Degrees: "  + waveDegree[1] + waveDegree[2] + waveDegree[3]);
+            
+
+            var waveDir = data.data.weather.map(weather => {
+                return `${JSON.stringify(weather.hourly[0].swellDir16Point)}`
+            }).join("");
+            document.querySelector("#wave-direction").insertAdjacentText("afterbegin","Wave Direction: "  + waveDir[1]);
+            
+
            
         });
 
