@@ -131,6 +131,11 @@ function getZipCode(event){
                 return `${JSON.stringify(weather.hourly[0].swellDir16Point)}`
             }).join("");
             document.querySelector("#wave-direction").insertAdjacentText("afterbegin","Wave Direction: "  + waveDir[1]);
+
+            var visibility = data.data.weather.map(weather => {
+                return `${JSON.stringify(weather.hourly[0].visibilityMiles)}`
+            }).join("");
+            document.querySelector("#visibility").insertAdjacentText("afterbegin","visibility: "  + visibility[1] + " miles");
             
 
            
