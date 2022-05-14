@@ -6,6 +6,10 @@
 
 //var apiAlerts = "https://api.weatherbit.io/v2.0/alerts?postal_code=90210&key=23f4eb9104a3417ebae0fd654b5b8faa";
 
+// array to store search history
+var searchHistory = [];
+
+
 document.querySelector('#search-form').addEventListener
     ('submit', getZipCode);
 var searchForm = document.getElementById('search-form');
@@ -109,14 +113,17 @@ function getZipCode(event){
 
             console.log(data);
 
-            var waterTemp = data.data.map(hourly => {
-                return `${hourly.waterTemp_F}`
+            var waterTemp = data.data.weather.map(weather => {
+                return `${JSON.stringify(weather.hourly[0].waterTemp_F)}`
             }).join("");
-            console.log(waterTemp);
+            document.querySelector("#water-temp").insertAdjacentText("afterbegin","Water Temperature: "  + waterTemp[1] + waterTemp[2] + "F");
+            
+           
         });
 
+       // save search history
+        saveStoreArray(zip, cityName);
         
-
     });
 
     
@@ -167,9 +174,48 @@ function getZipCode(event){
     
     event.preventDefault();
     
-  
+    
      
-};
+}; //end get zip code function
 
 
 
+// functions to save and load search history
+function saveStoreArray(zip, cityName) {
+    
+    searchHistory.push({city: cityName, zipCode: zip});
+    console.log(searchHistory);
+    localStorage.setItem("history", JSON.stringify(searchHistory));
+    if (searchHistory.length > 4) {
+        searchHistory.shift();
+    }
+}
+
+var historyEl = document.getElementById('history-ul');
+  function loadHistory() {
+    var savedSearch = localStorage.getItem("history");
+
+    if (!savedSearch) { // if no saved searches then do nothing
+      return false;
+    }
+
+    console.log("Saved locations found!");
+  
+    // parse into array of objects
+    searchHistory = JSON.parse(savedSearch);
+    console.log(savedSearch);
+    // loop through array 
+    for (var i = 0; i < searchHistory.length; i++) {
+      // create list elements in footer
+      var listItem = document.createElement("li");
+      var cityHistory = searchHistory[i].city;
+      var zipHistory = searchHistory[i].zipCode;
+      listItem.innerText = cityHistory + " (" + zipHistory + ")";
+      historyEl.appendChild(listItem);
+        // add to searchHistory array
+        //searchHistory.push(savedSearch[i]);
+    }
+  };
+
+
+//loadHistory();
