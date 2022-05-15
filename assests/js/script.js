@@ -284,8 +284,9 @@ function saveStoreArray(zip, cityName) {
     }
 }
 
-var historyEl = document.getElementById('history-ul');
+
   function loadHistory() {
+    var historyEl = document.getElementById('history-ul');
     var savedSearch = localStorage.getItem("history");
 
     if (!savedSearch) { // if no saved searches then do nothing
@@ -311,4 +312,4 @@ var historyEl = document.getElementById('history-ul');
   };
 
 
-//loadHistory();
+loadHistory();

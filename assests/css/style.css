@@ -214,8 +214,8 @@ footer li {
   align-items: center;
 }
 
-.hide {
-    display:none;
+.nav-ul li {
+  list-style: none;
 }
 
 
