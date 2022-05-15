@@ -1,12 +1,5 @@
 
-//apiCurrent supplys all the current weather information needed
-//var apiCurrent = "https://api.weatherbit.io/v2.0/current?postal_code=06282&key=23f4eb9104a3417ebae0fd654b5b8faa";
 
-//var apiAirQual = "https://api.weatherbit.io/v2.0/airquality?postal_code=06282&key=633d8e359dcd43f1afbf0304c7e3bd28";
-
-//var apiAlerts = "https://api.weatherbit.io/v2.0/alerts?postal_code=90210&key=23f4eb9104a3417ebae0fd654b5b8faa";
-
-// array to store search history
 var searchHistory = [];
 
 
@@ -40,13 +33,10 @@ function getZipCode(event){
     document.querySelector('.input').value = "";
     console.log(zip);
 
-    if (isNaN(zip) || !((/^[0-9]{5}$/.test(zip)))){
-        var errorMsg = document.createElement('div');
-        errorMsg.classList.add("error");
-        errorMsg.innerText = "Please enter a 5 digit zip code!";
-        searchForm.appendChild(errorMsg);
-        zip = "";
-    } 
+    if(zip){
+        zip = zip.replace(/\D/g, '');
+        console.log(zip);
+    }
 
     
 
