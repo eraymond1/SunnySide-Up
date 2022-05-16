@@ -56,10 +56,8 @@
         </form>
       </div>
 
-      <!-- could use javascript to turn the alerts box into a content carousel (super easy, I actually already have like half of the code for this)-->
-      <div
-        class="alerts column is-10 is-offset-1 is-centered has-text-centered"
-      >
+      
+         <div class="alerts column is-10 is-offset-1 is-centered has-text-centered">
         <p id="alerts" class="alert-text is-size-8 m-2 p-1"></p>
       </div>
       <div class="city is-centered">
@@ -100,28 +98,25 @@
             <div class="card-header is-size-4">
               <h4 class="card-header-title">Map of Nearby Area</h4>
             </div>
-            <!-- will need to figure out how to get new url for map when a new zip code is entered-->
 
             <div id="map"></div>
           </div>
-          <!-- will need to figure out how to get new url for map when a new zip code is entered-->
         </div>
       </div>
     </main>
+
     <footer class="footer">
+
       <div class="is-centered has-text-centered columns">
         <div class="column has-text-centered">
           <p class="is-size-5">Brought to you by</p>
           <p class="is-size-3">Team Sunny Side Up!</p>
         </div>
         <div class="column">
-          <span
-            class="material-symbols-outlined is-size-1"
-            id="display-footer-btn"
-            title="Click to View Full Footer"
-          >
-            sunny
-          </span>
+          <p id="display-footer-btn">
+
+          <span class="is-size-6">Click here to learn more about our web site and see your search history</span>
+          </p>
         </div>
         <div class="column has-text-centered">
           <h2 class="nav-title">Contact</h2>
@@ -146,22 +141,18 @@
             </li>
 
             <li>
-              <a href="https://api.tidesandcurrents.noaa.gov/api/prod/">
-                NOAA</a
+              <a href="https://www.worldweatheronline.com/developer/api/marine-weather-api.aspx">
+                World Weather Online</a
               >
             </li>
             <li>
               <a
                 href="https://console.cloud.google.com/google/maps-apis/new?project=sunnyside-up"
               >
-                Google
+                Google Maps
               </a>
             </li>
-            <li>
-              <a href="https://stormglass.io/marine-weather/">
-                Stormglass.io
-              </a>
-            </li>
+
           </ul>
         </div>
 
@@ -182,9 +173,7 @@
             </li>
 
             <li>
-              <a href="https://github.com/PhilemonKirlles"
-                >Philemon AbdEllah Kirlles</a
-              >
+              <a href="https://github.com/PhilemonKirlles">Philemon AbdEllah Kirlles</a>
             </li>
           </ul>
         </div>
@@ -202,7 +191,7 @@
             </li>
 
             <li>
-              <a href="#">Repository</a>
+              <a href="https://github.com/PhilemonKirlles/SunnySide-Up">Repository</a>
             </li>
           </ul>
         </div>
@@ -222,13 +211,13 @@
         </p>
       </div>
     </footer>
-<!--     <script
+    <script
       type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPX-2X1xcbmyp-LXowV7U4F336aFS7OH8&libraries=places"
-    ></script> -->
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGN0XbHDmTqV7DRrgj8SVIOMi1abugTkM&libraries=places"
+    ></script>
 
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPX-2X1xcbmyp-LXowV7U4F336aFS7OH8&callback=initAutocomplete&libraries=places&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
       defer
     ></script>
     <script src="./assests/js/script.js"></script>
